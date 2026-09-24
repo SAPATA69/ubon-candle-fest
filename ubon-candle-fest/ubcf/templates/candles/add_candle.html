@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    
+    <div class="card mt-3">
+      <div class="card-header bg-success text-white">
+        <h2>{{title}}</h2>
+      </div>
+      <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">    
+              {% if temples %}
+                <div class="mb-3">
+                  <select name="temple_id" id="temple_name" class="form-select">
+                    {% for temple in temples %}
+                      <option value="{{temple.id}}">{{temple.name}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Candle Image</label>
+                  <input type="file" name="candle_name" id="" class="form-control">
+                </div>
+              {% endif %}
+                
+              <button type="submit" class="btn btn-outline-success"><i class="bi bi-image"></i> Add Candle</button>
+            </form>
+      </div>
+    </div>
+    
+  </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{title}}</h1>
+    <a href="{{url_for('new_temple')}}" class="btn btn-outline-primary">New Temple</a>
+    <br>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Temple Name</th>
+          <th scope="col">Description</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {% for temple in temples %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{temple.name}}</td>
+            <td>{{temple.description}}</td>
+            
+          </tr>
+        {% endfor %}
+        
+        
+        
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

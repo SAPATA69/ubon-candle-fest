@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <div class="card">
+      <div class="card-header text-white bg-success">
+        <h2>{{title}}</h2>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Temple Name</label>
+                <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Temple Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea name="description" placeholder="Temple Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-success"><i class="bi bi-check2-all"></i> Add Temple</button>
+            </form>
+      </div>
+    </div>
+    
+  </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h2>{{title}}</h2>
+    <hr>
+    <div class="card">
+      <div class="card-header text-bg-success text-center">
+        <h4>{{title}}</h4>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" id="username" >
+        
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputConfirmPassword1" class="form-label">Confirm Password</label>
+            <input name="confirm_password" type="password" class="form-control" id="exampleInputConfirmPassword1">
+          </div>
+          
+          <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2-circle"></i> Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
