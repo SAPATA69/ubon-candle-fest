@@ -1,0 +1,8 @@
+Flask
+Flask-Bcrypt
+Flask-Login
+Flask-SQLAlchemy
+Pillow
+psycopg2-binary
+psycopg[binary]
+gunicorn
