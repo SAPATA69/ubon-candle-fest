@@ -4,7 +4,7 @@ from flask_login import LoginManager
 from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///ubccandle_db.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///ubcandle_db.sqlite"
 # เชื่อมต่อ PostgreSQL บน Render โดยตรง
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ubcf2026_vgrq_user:SfcyOvMHXXKjcbQ1MvDhWLLl48Hhbimz@dpg-daqafs8jo6nc73do59t0-a.virginia-postgres.render.com/ubcf2026_vgrq'
 
