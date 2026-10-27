@@ -184,6 +184,8 @@ def candles_api():
 @app.route('/api/uboncandlefest/temples/<int:id>', methods=['GET'])
 def get_temple_by_id(id):
   data = db.session.get(Temple, id)
+  if data is None:
+    return jsonify({'error': 'Temple not found'}), 404
   temple = {'id': data.id, 'name': data.name, 'description': data.description}
   candles = []
   for candle in data.candles:
@@ -196,6 +198,8 @@ def get_temple_by_id(id):
 @app.route('/api/uboncandlefest/users/<int:id>', methods=['GET'])
 def get_user_by_id(id):
   data = db.session.get(User, id)
+  if data is None:
+    return jsonify({'error': 'User not found'}), 404
   user = {'id': data.id, 'username': data.username, 'email': data.email}
   candles = []
   for candle in data.candles:
