@@ -203,7 +203,12 @@ def get_user_by_id(id):
   user = {'id': data.id, 'username': data.username, 'email': data.email}
   candles = []
   for candle in data.candles:
-    tmp_candle = {'id': candle.id, 'name': candle.name, 'owner': candle.user.username}
+    tmp_candle = {
+      'id': candle.id,
+      'name': candle.name,
+      'owner': candle.user.username,
+      'temple_name': candle.temple.name,
+    }
     candles.append(tmp_candle)
 
   user['candles'] = candles
